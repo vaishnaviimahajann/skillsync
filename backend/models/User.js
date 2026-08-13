@@ -11,6 +11,7 @@ const userSchema = new mongoose.Schema({
   github:   { type: String, default: "" },
   linkedin: { type: String, default: "" },
   avatar:   { type: String, default: "" },
+  resumeUrl: { type: String, default: '' },
 }, { timestamps: true });
 
 module.exports = mongoose.model("User", userSchema);

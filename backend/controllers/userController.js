@@ -33,4 +33,21 @@ async function discoverUsers(req, res) {
   }
 }
 
-module.exports = { updateProfile, discoverUsers };
+async function uploadResume(req, res) {
+  try {
+    if (!req.file) return res.status(400).json({ msg: 'No file uploaded' });
+    const resumeUrl = `/uploads/${req.file.filename}`;
+    const user = await User.findByIdAndUpdate(
+      req.user.id,
+      { resumeUrl },
+      { new: true }
+    ).select('-password');
+    res.json(user);
+  } catch (err) {
+    res.status(500).json({ msg: err.message });
+  }
+}
+
+
+module.exports = { updateProfile, discoverUsers, uploadResume };
+

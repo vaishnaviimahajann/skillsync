@@ -1,3 +1,4 @@
+const path = require('path');
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
@@ -18,6 +19,7 @@ const io = new Server(server, { cors: { origin: "*" } });
 
 app.use(cors());
 app.use(express.json());
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 connectDB();
 
