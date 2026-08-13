@@ -104,7 +104,7 @@ export default function Profile() {
           onChange={(e) => setResumeFile(e.target.files[0])}
         />
         <button
-          className="btn-secondary-sm"
+          className="btn-primary-sm"
           onClick={handleResumeUpload}
           disabled={!resumeFile || uploading}
           style={{ marginTop: '0.75rem', display: 'block' }}
