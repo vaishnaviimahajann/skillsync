@@ -1,7 +1,7 @@
 # 🔗 SkillSync — MERN Stack Project
-LIVE : https://skillsync-vogf.onrender.com
+LIVE : https://skillsync-1-hfmw.onrender.com
 
-College students ko skill-based teammates dhundhne ka platform.
+HELP COLLEGE STUDENTS TO FIND THEIR TEAMMATES
 
 ## 📁 Structure
 
